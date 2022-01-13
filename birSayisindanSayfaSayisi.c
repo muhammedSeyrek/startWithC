@@ -19,3 +19,23 @@ int main(){
 	}
 	printf("Sayfa Sayisi:%d",sayfaSayisi);
 }
+//farklı bir şekilde yapımı.
+#include<stdio.h>
+int main(){
+	int sayi=1,geciciSayi,sayac=0;
+	while(sayac<689){
+		geciciSayi=sayi;
+		while(sayi>0){
+			if(sayi%10==1){
+				sayac++;
+				sayi/=10;
+			}else
+				sayi/=10;
+			}
+		}
+		sayi=geciciSayi;
+		if(sayac==689)break;
+		sayi++;
+	}
+	printf("%d",sayi);
+}
