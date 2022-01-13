@@ -29,13 +29,11 @@ int main(){
 			if(sayi%10==1){
 				sayac++;
 				sayi/=10;
-			}else
-				sayi/=10;
-			}
+			}else sayi/=10;
 		}
-		sayi=geciciSayi;
-		if(sayac==689)break;
+			sayi=geciciSayi;
+		if(sayac<689)
 		sayi++;
 	}
-	printf("%d",sayi);
+	    printf("%d",sayi);
 }
