@@ -1,0 +1,70 @@
+#include<stdio.h>
+int main(){
+	char romen[10];
+	int temp,counter=0,number,conditionCounter=0;
+	printf("Enter number = ");
+	scanf("%d",&number);
+	temp=number;
+	if(number==100){
+		romen[counter]='C';
+		conditionCounter=1;
+	}
+	if(number>=90&&number<100){
+		if(number%90==0){
+		romen[counter]='X';
+		romen[counter+1]='C';
+		conditionCounter=1;
+		}
+		romen[counter]='X';
+		romen[counter+1]='C';
+		counter+=2;
+		number-=90;
+	}
+	if(number>=40&&number<50){
+		if(number%40==0){
+		romen[counter]='X';
+		romen[counter+1]='L';
+		conditionCounter=1;
+		}
+		romen[counter]='X';
+		romen[counter+1]='L';
+		counter+=2;
+		number-=40;
+	}
+	while(number>=50&&conditionCounter==0){
+		number-=50;
+		romen[counter]='L';
+		counter++;
+	}
+	while(number>=10&&conditionCounter==0){
+		number-=10;
+		romen[counter]='X';
+		counter++;
+	}
+	if(number%10==9){
+		romen[counter]='I';
+		romen[counter+1]='X';
+		conditionCounter++;
+	}
+	number%=10;
+	while(number>=5&&conditionCounter==0){
+		number/=5;
+		romen[counter]='V';
+		counter++;
+	}
+	number=temp;
+	number%=5;
+	while(number==4&&conditionCounter==0){
+		romen[counter]='I';
+		romen[counter+1]='V';
+		conditionCounter=1;
+	}
+	number%=5;
+	while(number>0&&conditionCounter==0){
+		romen[counter]='I';
+		counter++;
+		number-=1;
+	}	
+	printf("%s",romen);
+	return 0;
+}
