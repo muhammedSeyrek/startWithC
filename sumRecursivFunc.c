@@ -2,7 +2,6 @@
 int func();
 int main(){
 	int number;
-	int sum = 0;
 	scanf("%d",&number);
 	printf("%d ",func(number));	
 	return 0;	
