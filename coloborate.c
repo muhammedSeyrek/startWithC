@@ -57,7 +57,6 @@ int main(){
                     else 
                         printf("%d  ", day2++);
                 if(k != 7)
-                    day2++;
                     while(k < 7){
                         printf("    ");
                         k++;
