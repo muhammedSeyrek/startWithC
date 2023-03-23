@@ -4,7 +4,7 @@
 int main(){
 	srand(time(NULL));
 	int x;
-	printf("O sayi ve altindaki sayilarin toplami cift olan sayilari giriniz...  = ");
+	printf("O sayi ve altindaki sayilarin toplami cift olan sayilar giriniz...  = ");
 	scanf("%d", &x);
 	int flag = 1, i = 1;
 	int array[x + 1];//0 la beraber tutacagi icin sayinin bir fazlasi.
@@ -13,7 +13,7 @@ int main(){
 		array[i] = rand() % x;
 		for(int j = 0; j < i; j++){
 			if(array[i] == array[j])
-				flag = 0;//olumsuzluk eki, esitlik olursa baska sayiyla tekrar deneme yaptýracak.
+				flag = 0;//olumsuzluk eki, esitlik olursa baska sayiyla tekrar deneme yaptÄ±racak.
 		}
 		if(array[i] == array[i - 1] + 1){
 			if(flag == 1)//bir fazla olmasi da olumsuzluk, tekrar denettirecek.
@@ -26,7 +26,7 @@ int main(){
 		else
 			i++; //bir sorun yoksa devam etsin kontrole.
 	}
-	int values[x], sum = 0, y = 0;//values toplamlarý yarisi eden sayilar.
+	int values[x], sum = 0, y = 0;//values toplamlarÄ± yarisi eden sayilar.
 	//Algoritma; 4 sayisini ele alalim, alt sayilari ile toplamlari 10 ediyor. bana 5 lik kisim lazim
 	//toplamlari 0 etmesi icin. bu yuzden (n * (n+1)) / 2 toplamlari veriyor. Ama bana 5 lik kisim lazim oldugu icin
 	//ben 2 yerine 4 e bolucem.
