@@ -19,7 +19,7 @@ int main(){
 			array[i] = rand() % x;
 			for(int j = 0; j < i; j++){
 				if(array[i] == array[j])
-					flag = 0;//olumsuzluk eki, esitlik olursa baska sayiyla tekrar deneme yaptýracak.
+					flag = 0;//olumsuzluk eki, esitlik olursa baska sayiyla tekrar deneme yaptÃ½racak.
 			}
 			if(array[i] == array[i - 1] + 1){
 				if(flag == 1)//bir fazla olmasi da olumsuzluk, tekrar denettirecek.
@@ -48,7 +48,7 @@ int main(){
 				lastValue[i] = ((array[x] - array[0]) * -1);
 		}
 		//Aralarindaki farklari yazan kisim.
-		for(int i = 0; i <= x; i++){
+		for(int i = 0; i < x; i++){
 			if(lastValue[i] > 0)
 				printf("+%d ", lastValue[i]);
 			else
