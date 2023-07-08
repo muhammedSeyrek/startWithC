@@ -57,18 +57,19 @@ void del(Node **head, char *name, char *author){
 				return;
 			}
 			else{
-                if (*head == iter) {
-                    *head = iter->next;
-                } else {
-                    Node* prev = *head;
-                    while (prev->next != iter) {
-                        prev = prev->next;
-                    }
-                    prev->next = iter->next;
-                }
-                free(iter);
-                return;
-            }
+				if (*head == iter){
+				    *head = iter->next;
+				} 
+				else{
+				    Node* prev = *head;
+				    while (prev->next != iter){
+					prev = prev->next;
+				    }
+				    prev->next = iter->next;
+				}
+				free(iter);
+				return;
+            		}
 		}
 		iter = iter -> next;
 	}
@@ -122,7 +123,7 @@ int main() {
     char author[40];
 	FILE *file = fopen("Kitaplar.txt", "r");
 	if (file == NULL) {
-        printf("Dosya açma hatasý!\n");
+        printf("Dosya aÃ§ma hatasÃ½!\n");
         return 1;
     }
     char line[100];
