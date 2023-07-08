@@ -121,11 +121,11 @@ int main() {
     int choice;
     char name[50];
     char author[40];
-	FILE *file = fopen("Kitaplar.txt", "r");
-	if (file == NULL) {
-        printf("Dosya açma hatasý!\n");
-        return 1;
-    }
+    FILE *file = fopen("Kitaplar.txt", "r");
+	if(file == NULL){
+       	    printf("Dosya açma hatasý!\n");
+            return 1;
+    	}
     char line[100];
     while (fgets(line, sizeof(line), file) != NULL) {
         char* name = strtok(line, "-");
